@@ -58,7 +58,24 @@ let dealFn = {
       })
     })
     return promise
-  }
+  },
+
+  readDataList:(file)=>{
+    let promise = new Promise((resolve,reject)=>{
+      fs.readFile('../database/'+file,'utf-8',(err,data)=>{
+        if(err){
+          console.log('345')
+          console.log(err)
+        }else{
+          // console.log(data,'filedata')
+            data = JSON.parse(data);
+          resolve(data)
+        }
+      })
+    })
+    return promise
+  },
+
 }
 
 module.exports = dealFn

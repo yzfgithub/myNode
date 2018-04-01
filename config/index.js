@@ -12,13 +12,13 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/api':{
-        target: 'http://localhost:3000',
+        target: 'http://localhost:3001',
         changeOrigin: true
       },
       '/auth':{
-        target: 'http://localhost:3000',
+        target: 'http://localhost:3001',
         changeOrigin: true
-      }
+      },
     },
 
     // Various Dev Server settings

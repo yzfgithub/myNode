@@ -4,10 +4,14 @@ import HelloWorld from '@/components/HelloWorld'
 import Login from '@/components/Login'
 import Register from '@/components/Register'
 import Home from '@/components/Home'
+import NotFound from '@/components/404'
+import Cinema from '@/components/Cinema'
+import Me from '@/components/Me'
 
 Vue.use(Router)
 
 export default new Router({
+  mode:"history",
   routes: [
     {
       path: '/',
@@ -30,6 +34,18 @@ export default new Router({
       path: '/home',
       name: 'home',
       component: Home,
+    },{
+      path: '/404',
+      name: '404',
+      component: NotFound,
+    },{
+      path: '/cinema',
+      name: 'cinema',
+      component: Cinema,
+    },{
+      path: '/me',
+      name: 'me',
+      component: Me,
     }
   ]
 })
