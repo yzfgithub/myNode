@@ -17,7 +17,7 @@
       <hot :hotLists="hotLists"></hot>
     </section>
     <section v-show="!selnav">
-
+      <coming :comingLists="comingLists"></coming>
     </section>
     <play-video></play-video>
   </section>
@@ -41,6 +41,7 @@
   import swiper from './swiper.vue'
   import axios from 'axios'
   import hot from './hot.vue'
+  import coming from './coming.vue'
   import playVideo from './playVideo.vue'
   import { mapGetters, mapMutations } from 'vuex'
 export default{
@@ -52,10 +53,11 @@ export default{
           loaingLists:[],
           offset: 0,
           limit: 20,
-          total: 0
+          total: 0,
+          comingLists:[]
         }
     },
-  components:{city,swiper,hot,playVideo},
+  components:{city,swiper,hot,playVideo,coming},
   computed: {
     ...mapGetters([
             'hotLists'
